@@ -1,0 +1,186 @@
+ .button, input[type=submit]{
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+  *zoom: 1;
+  padding: 4px 10px 4px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-family: sans-serif !important;
+  line-height: 18px;
+  color: #333333;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  border: 1px solid #cccccc;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  *margin-left: .3em;
+  font-weight: normal;
+}
+
+.button a, .button a:visited, input[type=submit] a, {
+  color: #333333 !important;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:active,
+.button.active,
+.button.disabled,
+.button[disabled],
+input[type=submit]:hover,
+input[type=submit]:active,
+input[type=submit].active,
+input[type=submit].disabled,
+input[type=submit][disabled] {
+  background-color: #e6e6e6;
+}
+.button:active,
+input[type=submit].active, .button:active,
+input[type=submit].active {
+  background-color: #cccccc \9;
+}
+.button:first-child, input[type=submit]:first-child {
+  *margin-left: 0;
+}
+input[type=submit]:hover, .button:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.button:focus, input[type=submit]:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.button.active,.button:active,
+input[type=submit]:active, input[type=sumbit].active
+{
+  background-image: none;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  outline: 0;
+}
+
+input[type=submit]:last-child, .button:last-child {margin-right: 0}
+
+span.pay_dividend a, span.button a,
+span.pay_dividend a:visited, span.button a:visited {
+  text-decoration: none;
+}
+
+
+.green { }
+
+.red{ }
+
+.blue{ }
+
+.lt_blue{ }
+
+.lt_grey{ }
+
+span.pay_dividend {
+  display:inline-block;
+  height:16px;
+  padding:3px 0 1px;
+  text-align:center;
+  width:92px;
+}
+
+input.pay_dividend{
+  padding: 1px 2px 1px 2px;
+  display: block;
+  width: 92px;
+  height: 20px;
+  text-decoration: none;
+  color: #555;
+}
+
+#instruction .button.disabled {
+  a, a:hover { color: #888 !important; }
+  &:hover { background-color: #f5f5f5; }
+}
+
+.transaction .right_column {
+  .button, input[type=submit] {
+    line-height: 10px;
+  }
+}
+
+.action_button {
+  font-size: 28px;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  border: outset 1px #ccc;
+  float: left;
+  margin: 4px 4px 0 0;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  font-weight: bold;
+  overflow: hidden;
+
+  &:hover { cursor: pointer; }
+  input {
+    border: none;
+    padding: 3px 5px 7px 5px;
+    background: none;
+    line-height: 10px;
+    position: absolute;
+    font-size: 28px;
+    font-weight: bold;
+    display: block;
+
+    &:hover { cursor: pointer; }
+  }
+  a {
+    position: relative;
+    top: 0px;
+    color: #555;
+    text-decoration: none;
+
+    &:hover { color: red; }
+
+    &:visited { color: #555; }
+  }
+
+  &.edit {
+    width: 40px;
+    font-size: 14px;
+    a { top: 3px; }
+  }
+  &.up a { top: 3px; }
+  &.down a { top: 2px; }
+}
+
+
+

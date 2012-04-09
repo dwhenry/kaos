@@ -1,0 +1,14 @@
+@mixin round-corners($value) {
+  -moz-border-radius: $value;
+  -webkit-border-radius: $value;
+  border-radius: $value;
+}
+
+@mixin round-top-corners($value) {
+  -moz-border-radius-topleft: $value;
+  -webkit-border-top-left-radius: $value;
+  border-top-left-radius: $value;
+  -moz-border-radius-topright: $value;
+  -webkit-border-top-right-radius: $value;
+  border-top-right-radius: $value;
+}

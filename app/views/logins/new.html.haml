@@ -1,0 +1,12 @@
+#login
+  = form_for @login, :url => new_login_path, :class => 'login_form' do |f|
+    %ul
+      %li
+        = f.label :login
+        = f.text_field :login
+      %li
+        = f.label :password
+        = f.password_field :password
+      %li
+        = f.submit :login
+        = link_to 'Create Login', '', :id => 'create_login'

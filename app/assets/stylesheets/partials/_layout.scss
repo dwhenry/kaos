@@ -1,0 +1,39 @@
+body {
+  background: #EEE;
+  width: 1200px;
+  margin: 5px auto;
+
+
+  #head {
+    background: #CCC;
+    color: #333;
+    padding: 20px 40px;
+    @include round-top-corners(10px);
+  }
+
+  #body {
+    background: white;
+    font-size: 14px;
+    border: 3px solid #CCC;
+    overflow: hidden;
+
+    #toolbar {
+      width: 20%;
+      background: #EEE;
+      border-right: solid 1px #CCC;
+      height: 600px;
+      float: left;
+    }
+
+    #page {
+      width: 80%;
+      float: left;
+      height: 600px;
+    }
+  }
+
+  #foot {
+    text-align: center;
+    font-size: 12px;
+  }
+}

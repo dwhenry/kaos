@@ -1,0 +1,19 @@
+#load_screen {
+  -webkit-perspective: 500;
+  -webkit-transform-style: preserve-3d;
+
+  .line {
+    text-align: center;
+    font-size: 30px;
+
+    margin-top: 160px;
+    transform: rotateZ(10deg);
+    -webkit-transform: rotateZ(10deg);
+
+    &:first-child {
+      margin-top: 120px;
+      transform: rotateZ(-10deg);
+      -webkit-transform: rotateZ(-10deg);
+    }
+  }
+}

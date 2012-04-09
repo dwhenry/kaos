@@ -1,0 +1,21 @@
+!!! Strict
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %title Kaos
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    #head
+      %h1
+        KAOS
+        %span
+          \- The Planning System of Choice
+    #body
+      #toolbar
+      #page
+        = yield
+    #foot
+      Developed by ..... (insert blame here)
+
