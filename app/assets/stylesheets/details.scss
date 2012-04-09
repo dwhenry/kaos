@@ -4,8 +4,6 @@
     width: 220px;
     float: left;
     position: relative;
-    overflow-x: auto;
-    overflow-y: hidden;
 
     .title {
       font-size: 20px;
@@ -13,12 +11,16 @@
     }
 
     .stories {
-      border: solid 1px #CCC;
-      width: 200px;
-      padding: 5px;
-      height: 100px;
-      position: relative;
-      background: white;
+      overflow-x: auto;
+      overflow-y: hidden;
+      .story {
+        border: solid 1px #CCC;
+        width: 200px;
+        padding: 5px;
+        height: 100px;
+        position: relative;
+        background: white;
+      }
     }
 
     &.selected {

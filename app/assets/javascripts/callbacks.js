@@ -31,14 +31,16 @@ callbacks.add('update_screen', function(data) {
 function build_project(name, details) {
   project = $("<div class='project'></div>")
   project.append($("<div class='title'>" + name + "</div>"))
+  stories = $("<div class='stories'></div>")
 
   $.each(details, function(i, item_name) {
     top_px = i * -75;
-    project.append("<div class='stories' style='top: " + top_px + "px'>" + item_name + "</div>");
+    stories.append("<div class='story' style='top: " + top_px + "px'>" + item_name + "</div>");
   });
   height = 146 + (details.length * 32);
+
+  project.append(stories)
   project.css({height: height + 'px'})
+
   return project;
 }
-
-

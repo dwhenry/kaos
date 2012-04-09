@@ -2,7 +2,7 @@ $(function($){
   var Deselect = function(project, interval_size) {
     var $project = $(project);
     var interval = 0;
-    var stories = $project.children('.stories');
+    var stories = $project.children('.stories').children('.story');
 
     function update_positions() {
       height = setPosition(stories, interval, interval_size)
@@ -21,7 +21,7 @@ $(function($){
   var Select = function(project, interval_size) {
     var $project = $(project);
     var interval = interval_size;
-    var stories = $project.children('.stories');
+    var stories = $project.children('.stories').children('.story');
 
     function update_positions() {
       height = setPosition(stories, interval, interval_size)
@@ -44,7 +44,8 @@ $(function($){
     });
 
     scroll = stories.length > 4 ? 20 : 0;
-    return 146 + (stories.length * 32 * interval / interval_size) + (scroll * (interval_size - interval) / interval_size) ;
+    return 146 + scroll + ((stories.length * 32 - scroll) * interval) / interval_size ;
+    // return 146 + (stories.length * 32 * interval / interval_size) + (scroll * (interval_size - interval) / interval_size) ;
   }
 
   $('#page').on('click', '.project', function() {
