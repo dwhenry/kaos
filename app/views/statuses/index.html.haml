@@ -1,0 +1,18 @@
+%h1
+  Status'
+
+%table
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Description
+
+  %body
+    - @statuses.each do |status|
+      %tr{:'data-link' => status_path(status.id)}
+        %td
+          = status.name
+        %td
+          = status.description

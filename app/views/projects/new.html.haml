@@ -1,0 +1,22 @@
+%h1
+  New Project
+
+#project
+  = form_for @project, :url => projects_path do |f|
+    %ul
+      %li
+        = f.hidden_field :parent_id
+        = label_tag :parent
+        = text_field_tag :parent, @project.parent.name, :class => 'lookup', :data => {:url => lookup_projects_path, :field => 'engine_project_parent_id', :allow_blank => true}
+
+      %li
+        = f.label :name
+        = f.text_field :name
+
+      %li
+        = f.label :description
+        = f.text_area :description
+
+      %li
+        = f.submit :create
+        = link_to 'Back', details_full_path, :class => 'getMethod'

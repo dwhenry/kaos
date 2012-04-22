@@ -21,11 +21,12 @@ class LoginsController < ApplicationController
     if !!session[:user]
       render :text => :logged_in
     else
-      render :text => :login_required, :status => 404
+      render :text => :login_required, :status => 401
     end
   end
 
-  def delete
+  def destroy
+    @login = Engine::Login.new
     required_user
   end
 

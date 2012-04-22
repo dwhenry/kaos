@@ -103,6 +103,7 @@ GEM
       railties (~> 3.1.0)
       sass (>= 3.1.10)
       tilt (~> 1.3.2)
+    sequel (3.34.1)
     sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -130,6 +131,7 @@ DEPENDENCIES
   rails (= 3.1.3)
   ruby-debug19
   sass-rails (~> 3.1.5)
+  sequel
   sqlite3
   turn (= 0.8.2)
   uglifier (>= 1.0.3)

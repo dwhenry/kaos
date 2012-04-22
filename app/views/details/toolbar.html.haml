@@ -1,3 +1,7 @@
 %ul
   %li
-    = link_to_function 'Logout', '', :class => 'logout'
+    = link_to 'Logout', '', :class => 'logout'
+  %li
+    = link_to 'Projects', details_full_path, :class => 'getMethod'
+  %li
+    = link_to 'Status', statuses_path, :class => 'getMethod'

@@ -3,7 +3,7 @@ class DetailsController < ApplicationController
 
   def full
     render :json => {
-      :method => 'update_screen',
+      :method => 'updateScreen',
       :data => {
         :projects => ['Element A', 'Element B', 'Element C'],
         :project_details => {

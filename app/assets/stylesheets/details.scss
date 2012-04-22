@@ -1,18 +1,15 @@
-#page {
+.projects {
+  position: absolute;
   .project {
-    margin: 10px;
+    margin: 10px 0 10px 10px;
     width: 220px;
     float: left;
     position: relative;
 
-    .title {
-      font-size: 20px;
-      padding: 5px;
-    }
-
     .stories {
       overflow-x: auto;
       overflow-y: hidden;
+
       .story {
         border: solid 1px #CCC;
         width: 200px;
@@ -21,10 +18,6 @@
         position: relative;
         background: white;
       }
-    }
-
-    &.selected {
-      width: 100%;
     }
   }
 }

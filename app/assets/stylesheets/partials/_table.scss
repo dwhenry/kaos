@@ -1,0 +1,16 @@
+table {
+  border: solid 1px #ddd;
+  border-collapse: collapse;
+
+  th, td {
+    border: solid 1px #ddd;
+    padding: 2px 5px;
+  }
+
+  thead {
+    background: #ddd;
+  }
+
+  tbody td {
+  }
+}

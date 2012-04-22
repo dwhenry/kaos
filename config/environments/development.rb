@@ -1,3 +1,4 @@
+DB = Sequel.connect('sqlite://db/development.sqlite3')
 Kaos::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 

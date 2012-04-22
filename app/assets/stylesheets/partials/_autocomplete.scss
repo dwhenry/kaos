@@ -1,0 +1,23 @@
+
+.ui-menu {
+  background-color: white;
+  width: 200px;
+  border: solid 1px #AAA;
+  padding: 0;
+
+  .ui-menu-item {
+    list-style-type: none;
+    display: block;
+    padding: 0;
+
+    a {
+      display: block;
+      padding: 2px 5px;
+
+      &.ui-state-hover {
+        background-color: #DDD;
+        color: red;
+      }
+    }
+  }
+}

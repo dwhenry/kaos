@@ -16,7 +16,7 @@ jQuery(function($){
     $.ajax({
       url: '/details/full',
       success: function(value) {
-        callbacks.run(value['method'], value['data'])
+        Callbacks.run(value['method'], value['data']);
         if(value['toolbar'])
           $('#toolbar').html(value['toolbar'])
       }

@@ -1,43 +1,48 @@
 (function($){
 
-  $.fn.loginForm = function() {
-
-    $('body').on('submit', '.new_engine_login', function(xhr, data, status) {
+  $.fn.loginForm = function(selector) {
+    $(this).on('submit', selector, function(xhr, data, status) {
       xhr.preventDefault();
       $.ajax({
-        url: '/logins?' + $(this).serialize(),
+        url: '/logins',
+        data: $(this).serialize(),
         type: 'POST',
         success: function(value) {
-          callbacks.run(value['method'], value['data'])
+          Callbacks.run(value['method'], value['data'])
+          $('#toolbar').html(value['toolbar'])
         }
       })
     });
   };
 
-  $.fn.createLogin = function() {
-    return $(this).bind("click", function(e) {
+  $.fn.createLogin = function(selector) {
+    $(this).on("click", selector, function(e) {
       e.preventDefault();
     });
   };
 
-  $.fn.logout = function() {
-    return $(this).bind("click", function(e) {
+  $.fn.logout = function(selector) {
+    $(this).on("click", selector, function(e) {
       e.preventDefault();
       $.ajax({
         url: '/logins/1',
-        type: 'DESTROY',
+        type: 'DELETE',
         success: function(value) {
-          callbacks.run(value['method'], value['data'])
+          Callbacks.run(value['method'], value['data'])
         }
       })
     });
   };
 
+  Callbacks.add('login', function(data) {
+    $('#toolbar').html(data);
+    $('#page').html('invalid');
+  });
+
 })(jQuery);
 
-// automatically apply to all forms with a class of "prevent-double-submission"
 jQuery(function($){
-  $("#new_engine_login").loginForm();
-  $("#create_login").createLogin();
-  $(".logout").logout();
+  $("#toolbar").loginForm("#new_engine_login");
+  $("#toolbar").createLogin("#create_login");
+  $("#toolbar").logout(".logout");
 });

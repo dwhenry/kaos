@@ -1,0 +1,8 @@
+.error {
+  border: solid 3px #E69E48;
+  background: #F3D0A7;
+  padding: 20px;
+  @include round-corners(10px);
+
+
+}

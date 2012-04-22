@@ -1,10 +1,14 @@
 @import 'partials/mixins';
 @import 'partials/reset';
 @import 'partials/layout';
+@import 'partials/table';
 @import 'partials/forms';
 @import 'partials/buttons';
 @import 'partials/typo';
+@import 'partials/errors';
+@import 'partials/autocomplete';
 
 @import 'details';
 @import 'load_screen';
 @import 'toolbar';
+@import 'status';

@@ -1,6 +1,6 @@
 body { font: 16px/1.3125em sans-serif;} /* 16px/21px */
 
-h1 {
+#head #title {
   font-size: 30px;
   margin: 10px 0;
 
@@ -8,4 +8,17 @@ h1 {
     font-size: 20px;
     color: #666;
   }
+}
+
+h1 {
+  font-size: 26px;
+  padding: 10px;
+  margin: 5px;
+  color: #555;
+  border-bottom: solid 1px #CCC;
+}
+
+.title {
+  font-size: 20px;
+  padding: 5px;
 }

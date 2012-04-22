@@ -1,0 +1,17 @@
+%h1
+  New Status
+
+.description
+  Each status is a place for an individual story/project to be assigned to.  There are no default status' to give maximum KAOS.
+#status
+  = form_for @status, :url => new_status_path do |f|
+    %ul
+      %li
+        = f.label :name
+        = f.text_field :name
+      %li
+        = f.label :description
+        = f.text_field :description
+      %li
+        = f.submit :create
+        = link_to 'Back', statuses_path, :class => 'getMethod'
