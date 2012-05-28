@@ -7,4 +7,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require callbacks
+//= require mustache_link.js
 //= require_tree .

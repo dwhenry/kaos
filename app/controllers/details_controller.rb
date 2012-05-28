@@ -2,15 +2,19 @@ class DetailsController < ApplicationController
   layout nil
 
   def full
+    projects = Engine::Project.root
     render :json => {
       :method => 'updateScreen',
       :data => {
-        :projects => ['Element A', 'Element B', 'Element C'],
-        :project_details => {
-          'Element A' => ['Story 1', 'Story 2'],
-          'Element B' => ['Story A', 'Story B', 'Story C', 'Story D'],
-          'Element C' => ['Story X', 'Story Y', 'Story Z', 'Story W', 'Story V']
-        }
+        :projects => projects.map(&:name),
+        :project_details => projects.each_with_object({}) do |project, res|
+          res[project.name] = project.children.map do |project|
+            {
+              :name => project.name,
+              :description => project.description
+            }
+          end
+        end
       },
       :toolbar => render_to_string('toolbar')
     }

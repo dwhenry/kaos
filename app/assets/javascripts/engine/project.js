@@ -1,10 +1,13 @@
 (function($){
+  template = "<div class='story' style='top: {{top_px}}px'> <div> <span class='label'>Name:</span> <span class='value'>{{name}}</span> </div> <div> <span class='label'>Description:</span> <span class='value'>{{description}}</span> </div> </div>"
+
   function buildStroies(details) {
     stories = $("<div class='stories'></div>")
 
-    $.each(details, function(i, item_name) {
+    $.each(details, function(i, item) {
       top_px = i * -75;
-      stories.append("<div class='story' style='top: " + top_px + "px'>" + item_name + "</div>");
+      html = Mustache.to_html(template, {name: item.name, top_ps: top_px, description: item.description});
+      stories.append(html);
     });
 
     return stories;

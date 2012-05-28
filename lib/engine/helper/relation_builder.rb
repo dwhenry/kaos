@@ -15,13 +15,14 @@ module Engine
           manager.to
         end
       end
+
       #
       # This class should only be used through one of the class level
       # methods.  This is generic code for link two items.
       # The end structure being:
       #
       #  [ Item 1 ] => [ Relationship 1 ] <= [ Association 1]
-      #  [ Item 2 ] => [ Relationship 2 ]
+      #  [ Item 2 ] => [ Relationship 2 ] <= [ Association 1]
       #
       # The start_at and end_at dates on the assocaition are used
       # for historical mapping, and the ass_type field to filter

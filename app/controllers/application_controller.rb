@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     @login = Engine::Login.new
     render :json => {
       :method => 'login',
-      :data => render_to_string(:new)
+      :data => render_to_string('logins/new')
     }
   end
 end

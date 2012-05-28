@@ -6,7 +6,7 @@ module Engine
     def self.included(base)
       base.send :extend, ActiveModel::Naming
       base.send :include, ActiveModel::Conversion
-      base.send :include, ClassMethods
+      base.send :extend, ClassMethods
     end
 
     def persisted?; false end
@@ -20,6 +20,10 @@ module Engine
         Item.filter(:item_type => self::ITEM_TYPE).map do |item|
           new item.values
         end
+      end
+
+      def for_parent(parent)
+
       end
     end
 
