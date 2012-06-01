@@ -1,5 +1,13 @@
 %ul
   %li
+    Good
+    - if Time.now.hour < 12
+      Morning
+    - else
+      Afternoon
+    %span#username
+      John
+  %li
     = link_to 'Logout', '', :class => 'logout'
   %li
     = link_to 'Projects', details_full_path, :class => 'getMethod'

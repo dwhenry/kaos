@@ -3,7 +3,7 @@
   %head
     %title Kaos
     = stylesheet_link_tag "application"
-    = javascript_include_tag "application"
+    = javascript_include_tag "http://js.pusherapp.com/1.8/pusher.min.js", "application"
     = csrf_meta_tags
 
   %body
@@ -13,7 +13,8 @@
         %span
           \- The Planning System of Choice
     #body
-      #toolbar
+      #toolbar{:style => 'position: relative;'}
+        #inner
       #page
         = yield
     #foot

@@ -1,6 +1,6 @@
 label, .label {font-size: 14px; margin-bottom: 0.5em;}
 
-input[type=text], textarea, input[type=password]{
+input[type=text], textarea, input[type=password], input[type=email]{
   @include round-corners(3px);
   width: 180px;
   border: 1px solid #AAA;

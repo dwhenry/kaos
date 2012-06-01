@@ -46,6 +46,8 @@ Kaos::Application.routes.draw do
   #     resources :products
   #   end
 
+  match 'pusher/chat'
+
   match 'details/full' => 'details#full'
 
   resources :logins, :expect => [:index]

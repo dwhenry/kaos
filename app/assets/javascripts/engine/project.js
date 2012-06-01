@@ -1,5 +1,12 @@
 (function($){
-  template = "<div class='story' style='top: {{top_px}}px'> <div> <span class='label'>Name:</span> <span class='value'>{{name}}</span> </div> <div> <span class='label'>Description:</span> <span class='value'>{{description}}</span> </div> </div>"
+
+  var _template;
+  function template() {
+    if(template == undefined) {
+      _template = "<div class='story' style='top: {{top_px}}px'> <div> <span class='label'>Name:</span> <span class='value'>{{name}}</span> </div> <div> <span class='label'>Description:</span> <span class='value'>{{description}}</span> </div> </div>"
+    }
+    return _template;
+  }
 
   function buildStroies(details) {
     stories = $("<div class='stories'></div>")

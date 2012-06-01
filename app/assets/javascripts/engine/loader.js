@@ -18,7 +18,7 @@ jQuery(function($){
       success: function(value) {
         Callbacks.run(value['method'], value['data']);
         if(value['toolbar'])
-          $('#toolbar').html(value['toolbar'])
+          $('#toolbar #inner').html(value['toolbar'])
       }
     })
   }
